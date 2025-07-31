@@ -1,0 +1,28 @@
+<!-- Question 3
+ Audio Player with Advanced Controls and Transcript Feature 
+Create an HTML structure for an audio player that: 
+● Autoplays a podcast but starts muted. 
+● Includes loop, volume control, and preload metadata. 
+● Offers a transcript of the audio content for accessibility. 
+● Uses multiple <source> formats for browser compatibility. 
+● Provides a user-friendly fallback message.  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls autoplay muted loop preload="metadata">
+  <source src="music.mp3" type="audio/mpeg" autoplay>
+  Your browser does not support audio playback.
+</audio>
+
+<div class="transcript">
+  <h3>Transcript:</h3>
+  <p>Welcome to today's episode where we talk about web accessibility and multimedia handling...</p>
+</div>
+
+</body>
+</html>

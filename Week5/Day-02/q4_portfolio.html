@@ -1,0 +1,42 @@
+<!-- Question 4
+Build a Responsive Media Section Using HTML and CSS 
+Design a responsive section of a portfolio website that includes: 
+● A self-hosted video showcasing a project (with subtitles, poster image, and custom size). 
+● A background music loop using <audio> that auto-plays only on desktop screens. 
+● An embedded Google Map inside an <iframe> showing the office location. 
+● A downloadable PDF resume shown inside an <object> tag with fallback. 
+a) Provide the full HTML and relevant CSS for the section. 
+b) Explain how media queries and attributes like autoplay, muted, and controls behave 
+differently on mobile vs desktop browsers. 
+c) What are the accessibility considerations and performance impacts of loading too much 
+multimedia? -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="media-section">
+  <video class="project-video" controls muted poster="project-thumbnail.jpg" width="100%">
+    <source src="video.mp4" type="video/mp4">
+    <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+    Your browser does not support video playback.
+  </video>
+
+  <audio id="bg-music" autoplay loop >
+    <source src="music.mp3" type="audio/mp3" >
+  </audio>
+  <button onclick="document.getElementById('bg-music').play()"> Play Background Music</button>
+
+  <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_LINK"
+          width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
+
+  <object data="CHO_FEE.pdf" type="application/pdf" width="100%" height="600">
+    <p>Your browser does not support viewing PDFs. <a href="CHO_FEE.pdf">Download PDF</a>.</p>
+  </object>
+</section>
+
+</body>
+</html>

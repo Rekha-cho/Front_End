@@ -1,0 +1,35 @@
+<!-- Question 4 
+Create a form for user registration with the following fields and constraints: 
+● Full Name (required) 
+● Email (required, must be valid) 
+● Password (required, min 8 characters) 
+● Confirm Password (required, must match password — ignore matching for now) 
+● Age (between 18–99) 
+● Accept Terms checkbox (must be checked to submit)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required><br><br>
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" name="confirm" minlength="8" required><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99" required><br><br>
+        <label>
+        <input type="checkbox" name="terms" required> I accept the Terms and Conditions
+        </label><br><br>
+        <button type="submit">Register</button>
+  </form>
+</body>
+</html>
