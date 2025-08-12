@@ -1,0 +1,23 @@
+<!-- Write a media query that makes images (<img>) scale to 100% width only 
+on mobile devices.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (max-width: 600px) {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Image Example</h1>
+    <img src="image.png" alt="Sample Image">
+</body>
+</html>
